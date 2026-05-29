@@ -12,14 +12,14 @@ Input : -5 Result : Hibernating
 
 AIM:
 To write a java program to get the user input for temperature and display appropriate output.
+ALGORITHM:
 
-ALGORITHM :
 1.	Start the program.
-2.	
-3.	Import the necessary package 'java.util'
-4.	
-5.	Create a Scanner object to read input from the user.
-6.	
+
+2.	Import the necessary package 'java.util'
+
+3.	Create a Scanner object to read input from the user.
+
 4.Read an integer value and store it in the variable temp.
 
 5.Check if temp < 0 : If true, print "Hibernating".
