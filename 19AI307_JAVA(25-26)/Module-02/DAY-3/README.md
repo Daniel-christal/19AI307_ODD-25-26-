@@ -67,8 +67,9 @@ Call the increaseStorage() and display() methods to update and show the smartpho
 PROGRAM:
 ```
 Program to implement a Access Specifiers using Java
-Developed by: Shehan Shajahan
-RegisterNumber: 212223240154
+Developed by: DANIEL C
+RegisterNumber: 212223240023
+
 SOURCE CODE:
 import java.util.Scanner;
 
