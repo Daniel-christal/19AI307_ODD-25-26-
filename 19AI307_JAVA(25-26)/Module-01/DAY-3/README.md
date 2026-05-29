@@ -1,66 +1,49 @@
-Ex.No:1(B) CONDITIONAL STATEMENT
+Ex.No:1(C) LOOPING STATEMENT
 
-QUESTION: A dragon wakes based on temperature:
+QUESTION:
+Write a Java program to calculate the factorial of a number using a for loop. The factorial of n is the product of all positive integers less than or equal to n.
 
-If temperature < 0, it hibernates. If 0 ≤ temp ≤ 20, it snoozes. If 21 ≤ temp ≤ 35, it wakes. If temp > 35, it gets angry.
+<img width="332" height="156" alt="image" src="https://github.com/user-attachments/assets/705b9b7c-5c72-4fba-a7aa-4bcef95b30c1" />
 
-Write a java program to get the user input for temperature and display appropriate output.
-
-<img width="330" height="162" alt="image" src="https://github.com/user-attachments/assets/1d35dd41-bb49-4215-b7f4-df4f2858004c" />
-
-For example:
-
-Input : -5 Result : Hibernating
-
-AIM: To write a java program to get the user input for temperature and display appropriate output.
+AIM:
+To write a Java program that calculates the factorial of a given number using a for loop.
 
 ALGORITHM :
+Start the program and read an integer n from the user.
 
-Start the program.
+Initialize a variable factorial to 1 to store the result.
 
-Import the necessary package 'java.util'
+Use a for loop from 1 to n, multiplying factorial by the loop counter in each iteration.
 
-Create a Scanner object to read input from the user.
+After the loop ends, print the value of factorial as the factorial of n.
 
-4.Read an integer value and store it in the variable temp.
+Stop the program.
 
-5.Check if temp < 0 : If true, print "Hibernating".
-
-6.Else if temp is between 0 and 20 (inclusive) : Print "Snoozing".
-
-7.Else if temp is between 21 and 35 (inclusive): Print "Awake".
-
-Else (i.e., temp > 35): Print "Angry".
 PROGRAM:
 ```
-
-Program to implement a conditional statement using Java
+Program to implement a Looping Statement using Java
 Developed by: DANIEL C
-RegisterNumber:  212223240023
+RegisterNumber: 212223240023
 
+SOURCE CODE:
+import java.util.Scanner;
 
-import java.util.*;
-public class Main{
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
-        int temp=sc.nextInt();
-        if(temp<0){
-            System.out.println("Hibernating");
+public class FactorialCalculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();  
+        long factorial = 1;
+
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
         }
-        else if(temp>=0 && temp <=20){
-            System.out.println("Snoozing");
-        }
-        else if(temp >=21 && temp <=35){
-            System.out.println("Awake");
-        }
-        else{
-            System.out.println("Angry");
-        }
+
+        System.out.println("Factorial of " + n + " is: " + factorial);
     }
 }
 ```
 OUTPUT:
-<img width="894" height="297" alt="image" src="https://github.com/user-attachments/assets/716dc656-4476-4806-97cb-4b3a710779b7" />
+<img width="861" height="311" alt="image" src="https://github.com/user-attachments/assets/bad86c90-9ece-4a6a-9ffb-ddea4ee6706e" />
 
-
-RESULT: Thus, a java program to get the user input for temperature and display appropriate output is executed successfully.
+RESULT:
+The program successfully computes and displays the factorial value of the entered number.
