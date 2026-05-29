@@ -32,6 +32,7 @@ Create a Scanner object to read input from the user.
 
 Else (i.e., temp > 35): Print "Angry".
 PROGRAM:
+```
 
 Program to implement a conditional statement using Java
 Developed by: DANIEL C
@@ -57,6 +58,7 @@ public class Main{
         }
     }
 }
+```
 OUTPUT:
 <img width="894" height="297" alt="image" src="https://github.com/user-attachments/assets/716dc656-4476-4806-97cb-4b3a710779b7" />
 
