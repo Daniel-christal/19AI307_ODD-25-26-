@@ -39,7 +39,8 @@ PROGRAM:
 Program to implement variables and Operators using Java
 Developed by: Daniel C
 RegisterNumber:  212223240023
-*/
+
+
 import java.util.*;
 public class prog{
     public static void main(String[] args){
@@ -49,6 +50,7 @@ public class prog{
         System.out.print("Hello, "+name);
     }
 }
+/*
 OUTPUT:
 
 <img width="758" height="276" alt="image" src="https://github.com/user-attachments/assets/251d6bab-d32d-4d47-99e3-22653a5709bf" />
