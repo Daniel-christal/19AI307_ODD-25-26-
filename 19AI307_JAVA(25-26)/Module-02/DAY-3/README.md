@@ -1,39 +1,134 @@
-# Ex.No:2(C) ACCESS SPECIFIERS
+Ex.No:2(C) ACCESS SPECIFIERS
 
-## QUESTION:
+QUESTION:
+Write a Java program to create a class called Smartphone with private instance variables brand, model, and storageCapacity. Provide public getter and setter methods to access and modify these variables. Add a method called increaseStorage() that takes an integer value and increases the storageCapacity by that value.
+
+import java.util.Scanner;
+
+class Smartphone { private String brand; private String model; private int storageCapacity;
+
+public String getBrand() {
+    return brand;
+}
+
+public String getModel() {
+    return model;
+}
+
+public int getStorageCapacity() {
+    return storageCapacity;
+}
 
 
-## AIM:
+public void setBrand(String brand) {
+    this.brand = brand;
+}
+
+public void setModel(String model) {
+    this.model = model;
+}
+
+public void setStorageCapacity(int storageCapacity) {
+    this.storageCapacity = storageCapacity;
+}
 
 
-## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	
+public void increaseStorage(int value) {
+    if (value > 0) {
+        this.storageCapacity += value;
+    }
+}
 
 
+public void display() {
+    System.out.println("Brand: " + brand);
+    System.out.println("Model: " + model);
+    System.out.println("Updated Storage Capacity: " + storageCapacity + " GB");
+    System.out.println("------------------------------");
+}
+}
 
+//continue your code here
 
+AIM:
+To create a Smartphone class with private attributes and methods to access, modify, and increase storage.
 
-## PROGRAM:
- ```
-/*
-Program to implement a Access Specifiers using Java
-Developed by: 
-RegisterNumber:  
-*/
+ALGORITHM :
+Start the program and create a Smartphone class with private attributes brand, model, and storageCapacity.
+
+Provide getter and setter methods to access and modify the private attributes.
+
+Create a method increaseStorage(int value) to add the given value to storageCapacity.
+
+In the main() method, read input from the user for brand, model, storage capacity, and the value to increase storage.
+
+Call the increaseStorage() and display() methods to update and show the smartphone details, then stop the program.
+
+PROGRAM:
 ```
+Program to implement a Access Specifiers using Java
+Developed by: Shehan Shajahan
+RegisterNumber: 212223240154
+SOURCE CODE:
+import java.util.Scanner;
 
-## SOURCE CODE:
+class Smartphone {
+    private String brand;
+    private String model;
+    private int storageCapacity;
 
+    public String getBrand() {
+        return brand;
+    }
+    public String getModel() {
+        return model;
+    }
+    public int getStorageCapacity() {
+        return storageCapacity;
+    }
 
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+    public void setModel(String model) {
+        this.model = model;
+    }
+    public void setStorageCapacity(int storageCapacity) {
+        this.storageCapacity = storageCapacity;
+    }
 
+    public void increaseStorage(int value) {
+        if (value > 0) {
+            this.storageCapacity += value;
+        }
+    }
 
+    public void display() {
+        System.out.println("Brand: " + brand);
+        System.out.println("Model: " + model);
+        System.out.println("Updated Storage Capacity: " + storageCapacity + " GB");
+        System.out.println("------------------------------");
+    }
+}
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
+        Smartphone phone = new Smartphone();
+        phone.setBrand(sc.nextLine());
+        phone.setModel(sc.nextLine());
+        phone.setStorageCapacity(sc.nextInt());
 
-## OUTPUT:
+        int increaseValue = sc.nextInt();
+        phone.increaseStorage(increaseValue);
+        phone.display();
+        sc.close();
+    }
+}
+```
+OUTPUT:
+<img width="1221" height="555" alt="image" src="https://github.com/user-attachments/assets/49e35dc7-2997-478b-b8ff-adc69d59ec29" />
 
-
-
-## RESULT:
+RESULT:
+The program updates and displays the smartphone details, including the increased storage.
