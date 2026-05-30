@@ -1,39 +1,89 @@
-# Ex.No:3(C) ABSTRACTION
+Ex.No:3(C) ABSTRACTION
 
-## QUESTION:
+QUESTION:
+Description: Create abstract class GameScore with method finalScore(). Subclasses:
 
+ArcadeGame: score = baseScore + (level × 100)
 
-## AIM:
+PuzzleGame: score = (attempts ≤ 3) ? 1000 - (attempts × 100) : 500
 
+Input Format:
 
-## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	
+First line: 1 or 2 Second line: base, level (or attempts)
 
+Output Format:
 
+Final score (int)
 
+AIM:
+To write a Java program using an abstract class GameScore with subclasses ArcadeGame and PuzzleGame, each implementing its own finalScore() method.
 
-
-## PROGRAM:
- ```
-/*
-Program to implement a Abstraction using Java
-Developed by: 
-RegisterNumber:  
-*/
+ALGORITHM :
+Create an abstract class GameScore with an abstract method finalScore().
+Define subclass ArcadeGame where finalScore = baseScore + (level × 100).
+Define subclass PuzzleGame where
+If attempts ≤ 3, score = 1000 - (attempts × 100)
+Else score = 500.
+Take user input for game type and relevant values.
+Display the final score based on game type.
+PROGRAM:
 ```
 
-## SOURCE CODE:
+Program to implement a Abstraction using Java
+Developed by: DANIEL C
+RegisterNumber: 212223240023
+
+SOURCE CODE:
+import java.util.*;
+
+abstract class GameScore {
+    abstract int finalScore();
+}
+
+class ArcadeGame extends GameScore {
+    int base, level;
+    ArcadeGame(int base, int level) {
+        this.base = base;
+        this.level = level;
+    }
+    int finalScore() {
+        return base + (level * 100);
+    }
+}
+
+class PuzzleGame extends GameScore {
+    int attempts;
+    PuzzleGame(int attempts) {
+        this.attempts = attempts;
+    }
+    int finalScore() {
+        if (attempts <= 3)
+            return 1000 - (attempts * 100);
+        else
+            return 500;
+    }
+}
+
+public class prog {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int type = sc.nextInt();
+        if (type == 1) {
+            int base = sc.nextInt();
+            int level = sc.nextInt();
+            ArcadeGame game = new ArcadeGame(base, level);
+            System.out.println(game.finalScore());
+        } else if (type == 2) {
+            int attempts = sc.nextInt();
+            PuzzleGame game = new PuzzleGame(attempts);
+            System.out.println(game.finalScore());
+        }
+    }
+}
+```
+OUTPUT:
+<img width="1091" height="285" alt="image" src="https://github.com/user-attachments/assets/1a66feed-b309-446b-9771-1d6da39d6b97" />
 
 
-
-
-
-
-
-## OUTPUT:
-
-
-
-## RESULT:
+RESULT:
+The program successfully demonstrates abstraction and inheritance by computing the final score for different game types using subclass-specific logic.
