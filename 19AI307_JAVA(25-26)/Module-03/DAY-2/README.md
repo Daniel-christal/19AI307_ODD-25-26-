@@ -66,8 +66,10 @@ class prog {
         sc.close();
     }
 }
+```
 OUTPUT:
-<img width="543" height="216" alt="image" src="https://github.com/user-attachments/assets/a8467d76-7958-43ec-b3b2-6a12ca769099" />
+<img width="1013" height="454" alt="image" src="https://github.com/user-attachments/assets/bc9296cf-e4e9-495b-b515-5615dc014568" />
+
 
 RESULT:
 The program displays the area of the chosen shape based on the input values.
