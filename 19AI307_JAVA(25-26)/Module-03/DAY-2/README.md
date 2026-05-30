@@ -1,7 +1,7 @@
 Ex.No:3(b) POLYMORPHISM
 
 QUESTION:
-Write a Java program that calculates the area of different shapes using method overloading. Create a class AreaCalculator with:
+Write a Java program that calculates the area of different shapes using method overloading. Create a class AreaCalculator with::
 
 area(int side) for square
 
