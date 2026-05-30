@@ -1,4 +1,4 @@
-Ex.No:3(D) INTERFACE
+Ex.No:4(D) INTERFACE
 
 QUESTION:
 You are programming bots that analyze weather data. Each bot must implement a common interface and give a prediction.
