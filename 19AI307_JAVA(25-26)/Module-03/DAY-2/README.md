@@ -67,7 +67,7 @@ class prog {
     }
 }
 OUTPUT:
-<img width="1020" height="458" alt="image" src="https://github.com/user-attachments/assets/00c488df-cff6-4742-82de-636ef71f01bb" />
+<img width="1020" height="458" alt="image" src="https://github.com/user-attachments/assets/03ae32fc-dc9b-4eb2-9532-5c379229bf19" />
 
 RESULT:
 The program displays the area of the chosen shape based on the input values.
