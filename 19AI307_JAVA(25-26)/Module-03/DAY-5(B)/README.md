@@ -1,39 +1,50 @@
-# Ex.No:3(F) WRAPPER CLASS
+Ex.No:3(F) WRAPPER CLASS
 
-## QUESTION:
+QUESTION:
+Write a Java program to convert a string to an integer using a wrapper class and perform addition.
 
+AIM:
+To convert string inputs into integers using the wrapper class and perform addition.
 
-## AIM:
-
-
-## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	
-
-
-
-
-
-## PROGRAM:
- ```
-/*
-Program to implement a Wrapper Class using Java
-Developed by: 
-RegisterNumber:  
-*/
+ALGORITHM :
+Read two numbers as strings.
+Convert them to integers using Integer.parseInt().
+Add the two integers.
+Display the sum.
+PROGRAM:
 ```
+Program to implement a Wrapper Class using Java
+Developed by: DANIEL C
+RegisterNumber: 212223240023
 
-## SOURCE CODE:
+SOURCE CODE:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String str1 = scanner.next();
+
+        String str2 = scanner.next();
+
+        scanner.close();
+
+        try {
+            int num1 = Integer.parseInt(str1);
+            int num2 = Integer.parseInt(str2);
 
 
+            int sum = num1 + num2;
+            System.out.println("Sum = " + sum);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Please enter a valid number.");
+        }
+    }
+}
+```
+OUTPUT:
+<img width="819" height="424" alt="image" src="https://github.com/user-attachments/assets/7b74b715-1b8d-41d4-aa24-37405d57233d" />
 
-
-
-
-
-## OUTPUT:
-
-
-
-## RESULT:
+RESULT:
+The program successfully converts strings to integers and displays their sum.
