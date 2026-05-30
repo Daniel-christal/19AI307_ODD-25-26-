@@ -1,39 +1,80 @@
-# Ex.No:4(C)  COMPOSITION IN JAVA
+Ex.No:4(C) COMPOSITION IN JAVA
 
-## QUESTION:
+QUESTION:
+Create animals from two regions: "Africa" and "Asia". Use Abstract Factory to create families of animals (Herbivore, Carnivore). Print the interaction result.
 
+AIM:
+To demonstrate the Abstract Factory Pattern by creating families of related objects (Herbivore and Carnivore) from two regions — Africa and Asia.
 
-## AIM:
-
-
-## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	
-
-
-
-
-
-## PROGRAM:
- ```
-/*
-Program to implement a Composition Concepts in Java
-Developed by: 
-RegisterNumber:  
-*/
+ALGORITHM :
+Define interfaces for Herbivore and Carnivore.
+Create concrete classes for African (Zebra, Lion) and Asian (Deer, Tiger) animals.
+Define an AnimalFactory interface with methods to create herbivores and carnivores.
+Implement concrete factories: AfricaAnimalFactory and AsiaAnimalFactory.
+In main(), use factories to create animals and simulate interactions.
+PROGRAM:
 ```
+Program to implement a Composition Concepts in Java
+Developed by: DANIEL C
+RegisterNumber: 212223240023
 
-## SOURCE CODE:
+SOURCE CODE:
+import java.util.Scanner;
 
+interface Herbivore {}
+interface Carnivore {
+    void eat(Herbivore h);
+}
 
+class Wildebeest implements Herbivore {}
+class Lion implements Carnivore {
+    public void eat(Herbivore h) {
+        System.out.println("Lion eats Wildebeest");
+    }
+}
 
+class Buffalo implements Herbivore {}
+class Tiger implements Carnivore {
+    public void eat(Herbivore h) {
+        System.out.println("Tiger eats Buffalo");
+    }
+}
 
+interface AnimalFactory {
+    Herbivore createHerbivore();
+    Carnivore createCarnivore();
+}
 
+class AfricaFactory implements AnimalFactory {
+    public Herbivore createHerbivore() { return new Wildebeest(); }
+    public Carnivore createCarnivore() { return new Lion(); }
+}
 
+class AsiaFactory implements AnimalFactory {
+    public Herbivore createHerbivore() { return new Buffalo(); }
+    public Carnivore createCarnivore() { return new Tiger(); }
+}
 
-## OUTPUT:
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String region = sc.nextLine().toLowerCase();
+        AnimalFactory factory;
 
+        if (region.equals("africa")) factory = new AfricaFactory();
+        else if (region.equals("asia")) factory = new AsiaFactory();
+        else {
+            System.out.println("Invalid region");
+            return;
+        }
 
-
-## RESULT:
+        Carnivore carn = factory.createCarnivore();
+        Herbivore herb = factory.createHerbivore();
+        carn.eat(herb);
+    }
+}
+```
+OUTPUT:
+<img width="819" height="333" alt="image" src="https://github.com/user-attachments/assets/501239f7-ef8f-45a5-8442-61a8a95531b4" />
+RESULT:
+The program successfully demonstrates the Abstract Factory Pattern, showing different animal interactions for Africa and Asia.
